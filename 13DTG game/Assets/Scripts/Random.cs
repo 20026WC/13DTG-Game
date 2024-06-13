@@ -16,19 +16,13 @@ public class Random : MonoBehaviour
         if (ran == 1)
         {
             Plane.SetActive(false);
-            Piller.SetActive(true);
-            Piller2.SetActive(true);
         }
         else if (ran == 2)
         {
-            Plane.SetActive(true);
             Piller.SetActive(false);
-            Piller2.SetActive(true);
         }
         else
         {
-            Plane.SetActive(true);
-            Piller.SetActive(true);
             Piller2.SetActive(false);
         }
     }
