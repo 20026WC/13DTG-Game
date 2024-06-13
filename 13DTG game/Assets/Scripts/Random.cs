@@ -8,28 +8,27 @@ public class Random : MonoBehaviour
     public GameObject Piller;
     public GameObject Piller2;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public void RandomNumber()
     {
-        System.Random ran = new System.Random();
-        int randomInt = ran.Next(1, 3);
+        int ran = UnityEngine.Random.Range(1, 4);
 
-        if ( ran = 1)
+        if (ran == 1)
         {
             Plane.SetActive(false);
+            Piller.SetActive(true);
+            Piller2.SetActive(true);
         }
-        else if (ran = 2)
+        else if (ran == 2)
         {
+            Plane.SetActive(true);
             Piller.SetActive(false);
+            Piller2.SetActive(true);
         }
         else
         {
+            Plane.SetActive(true);
+            Piller.SetActive(true);
             Piller2.SetActive(false);
         }
     }
